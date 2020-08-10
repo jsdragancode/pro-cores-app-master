@@ -1,0 +1,27 @@
+{
+  "name": "ProcoreSearch",
+  "displayName": "ProcoreSearch",
+  "expo": {
+    "name": "ProcoreSearch",
+    "slug": "ProcoreSearch",
+    "privacy": "unlisted",
+    "sdkVersion": "36.0.0",
+    "version": "1.2.2",
+    "orientation": "portrait",
+    "splash": {
+      "image": "./src/images/splash.png",
+      "backgroundColor": "#FFFFFF",
+      "resizeMode": "cover"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+       "supportsTablet": false,
+       "bundleIdentifier": "com.procoreSearch.WozJobs"
+     }     
+  }
+}
