@@ -6,7 +6,7 @@
     "slug": "ProcoreSearch",
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
-    "version": "1.2.2",
+    "version": "1.2.4",
     "orientation": "portrait",
     "splash": {
       "image": "./src/images/splash.png",

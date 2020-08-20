@@ -17,7 +17,8 @@ import SearchSettingScreen from './SearchSettingScreen';
 export default class Main extends Component {
 	constructor(props) {
 		super(props);
-		global.serverurl = 'https://pro-cores-api.herokuapp.com'//'http://3.93.238.220:5000';
+		//global.serverurl = 'https://pro-cores-api.herokuapp.com'//'http://3.93.238.220:5000';
+		global.serverurl = 'http://ec2-54-84-155-142.compute-1.amazonaws.com:5000';
 	}
 
   render() {
