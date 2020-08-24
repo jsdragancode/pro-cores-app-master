@@ -33,6 +33,7 @@ export default class LookUpScreen extends Component {
       validSearch: false,
       searchResults: [],
       pricing: [],
+      pricing_est: [],
       spinner: false,
       disabled: false,
       convertRate: 100,
@@ -96,7 +97,7 @@ export default class LookUpScreen extends Component {
               axios.get(`${global.serverurl}/converter/get_prices`, {headers: {Authorization: global.token, email: global.email}})
               .then(response => {
                 if (response.data.success === 1){
-                  cb(null, response.data.data.pricings)
+                  cb(null, response.data.data)
                 }
               })
               .catch(error => {
@@ -114,13 +115,15 @@ export default class LookUpScreen extends Component {
             } else {
               this.setState({
                 searchResults: results[0],
-                pricing: results[1]
+                pricing: results[1].pricings,
+                pricing_est: results[1].pricings_est
               }, () => {
                 setTimeout(() => {
     
                   Actions.searchResults({
                     searchResults: this.state.searchResults,
                     pricing: this.state.pricing,
+                    pricing_est: this.state.pricing_est,
                     convertRate: this.state.convertRate
                   })
                   this.setState({
