@@ -10,6 +10,7 @@ import {
   TextInput,
   Button,
   ScrollView,
+  SafeAreaView,
 } from "react-native";
 import { Actions, ActionConst } from "react-native-router-flux";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
@@ -170,7 +171,7 @@ const SearchResultsScreen = (props) => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.navbarContainer}>
         <View>
           <TouchableOpacity
@@ -360,7 +361,7 @@ const SearchResultsScreen = (props) => {
           </TouchableOpacity>
         </View>
       )}
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -434,12 +435,15 @@ const styles = StyleSheet.create({
     width: DEVICE_WIDTH - 50,
     flexDirection: "row",
     alignItems: "center",
+    marginTop: 40,
+    marginBottom: 20,
+    height: 60,
   },
   textTitle: {
     color: "black",
     fontWeight: "bold",
     marginLeft: 20,
-    fontSize: DEVICE_WIDTH / 12,
+    fontSize: 30,
   },
   cardTitle: {
     shadowColor: "rgba(0, 0, 0, 0.2)",
